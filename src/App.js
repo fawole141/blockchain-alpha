@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About";
 import FAQ from "./Components/FAQ";
@@ -9,7 +10,7 @@ import Team from "./Components/Team";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-black">
       <Header />
       <Hero />
       <About />
