@@ -3,6 +3,30 @@ import logo from "../Assets/logo1.png"
 import {HashLink as Link } from "react-router-hash-link";
 
 const Header = () => {
+
+  const routesList = [
+    {
+      link: "/",
+      name: "Home"
+    },
+    {
+      link: "#about",
+      name: "About"
+    },
+    {
+      link: "#team",
+      name: "Our Team"
+    },
+    {
+      link: "#start",
+      name: "Start"
+    },
+    {
+      link: "#faqs",
+      name: "FAQ"
+    }
+  ]
+
   return (
     // <!-- Main navigation container -->
     <nav
@@ -64,58 +88,21 @@ const Header = () => {
             className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
             data-te-navbar-nav-ref
           >
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              {/* <!-- Home link --> */}
-              <Link
-                className="text-natural hover:text-brand-color-1 focus:text-brand-color-1 [&.active]:text-brand-color-1"
-                to="/"
-                smooth
-              >
-                Home
-              </Link>
-            </li>
-            {/* <!-- Team link --> */}
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <Link
-                className="text-natural hover:text-brand-color-1 focus:text-brand-color-1 lg:px-2 [&.active]:text-brand-color-1"
-                to="#about"
-                smooth
-              >
-                About
-              </Link>
-            </li>
-            {/* <!-- Our Team link --> */}
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <Link
-                className="text-natural hover:text-brand-color-1 focus:text-brand-color-1 lg:px-2 [&.active]:text-brand-color-1"
-                to="#teams"
-                smooth
-              >
-                Our Team
-              </Link>
-            </li>
-
-            {/* <!-- Start link --> */}
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <Link
-                className="text-natural hover:text-brand-color-1 focus:text-brand-color-1 lg:px-2 [&.active]:text-brand-color-1"
-                to="#start"
-                smooth
-              >
-                Start
-              </Link>
-            </li>
-
-            {/* <!-- FAQ link --> */}
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <Link
-                className="text-natural hover:text-brand-color-1 focus:text-brand-color-1 lg:px-2 [&.active]:text-brand-color-1"
-                to="#faqs"
-                smooth
-              >
-                FAQs
-              </Link>
-            </li>
+            {
+              routesList.map((route)=> {
+                return  <li key={route.name} className="mb-4 lg:mb-0 lg:pr-12" data-te-nav-item-ref>
+                {/* <!-- Home link --> */}
+                <Link
+                  className="text-natural hover:text-brand-color-1 focus:text-brand-color-1 [&.active]:text-brand-color-1"
+                  to={route.link}
+                  smooth
+                >
+                  {route.name}
+                </Link>
+              </li>
+              })
+            }
+           
           </ul>
         </div>
       </div>
