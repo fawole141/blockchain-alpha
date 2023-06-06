@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About";
 import FAQ from "./Components/FAQ";
