@@ -2,7 +2,7 @@ import React from 'react'
 
 const Team = () => {
   return (
-    <div className=' text-natural' id='teams'>Team</div>
+    <div className=' text-natural' id='team'>Team</div>
   )
 }
 
