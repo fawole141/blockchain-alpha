@@ -1,21 +1,17 @@
 import React from "react";
+import styles from "./style";
 
 const About = () => {
   return (
-    <div className=" text-natural" id="about">
-      <header className="text-4xl text-center my-8">ABOUT</header>
-      <div className="text-center py-3">
-        <header className="text-3xl">The Introductory Statement</header>
-        <p>Where you need to be for quality content and top-notch marketing</p>
-      </div>
-      <div className="text-center py-3">
-        <header className="text-3xl">Who We Are</header>
-        <p>
-          Blockchain Alpha delivers excellent technical content marketing to
-          crypto companies, blockchains, startups, DAOs, and DeFi protocols.{" "}
-        </p>
-      </div>
-      <div className="text-center py-3">
+    <div
+      className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
+      id="about"
+    >
+      <header className="font-semibold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-fulltext-center my-8">
+        ABOUT US
+      </header>
+
+      <div className={`text-center py-3`}>
         <header className="text-3xl">Why Blockchain Alpha?</header>
         <p>
           Anyone can write content, but not everyone can write with sound
