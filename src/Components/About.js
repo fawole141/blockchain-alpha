@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./style";
+import Lottie from "lottie-react";
+import animationData from "../Assets/about.json";
 
 const About = () => {
   return (
@@ -7,13 +9,30 @@ const About = () => {
       className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
       id="about"
     >
-      <header className="font-semibold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-fulltext-center my-8">
-        ABOUT US
-      </header>
+      <div className="flex justify-between  w-full">
+        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center md:text-left my-8">
+          ABOUT US
+        </header>
+        <div className="hidden md:block w-[15%] h-[15%]">
+          <Lottie animationData={animationData} />
+        </div>
+      </div>
 
-      <div className={``}>
-        <div className={`text-center py-3`}>
-          <header className="text-3xl">Why Blockchain Alpha?</header>
+      <p className={`${styles.paragraph} mb-12`}>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Necessitatibus, eum quaerat beatae voluptates rem doloremque explicabo
+        veritatis eaque voluptatum placeat. Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Necessitatibus, eum quaerat beatae
+        voluptates rem doloremque explicabo veritatis eaque voluptatum placeat.
+      </p>
+
+      <div
+        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-x-6 w-full px-5 mx-auto text-center text-[#F0F0F0]`}
+      >
+        <div className="flex flex-col text-center w-full md:ml-[24px] p-6 space-y-6 rounded-lg bg-brand-color-1 ">
+          <header className="text-3xl font-semibold">
+            Why Blockchain Alpha?
+          </header>
           <p>
             Anyone can write content, but not everyone can write with sound
             technical expertise and still maintain simplicity. At Blockchain
@@ -23,8 +42,10 @@ const About = () => {
           </p>
         </div>
 
-        <div className="text-center py-3">
-          <header className="text-3xl">Top Technical Expertise </header>
+        <div className={`${styles.card}`}>
+          <header className="text-3xl font-semibold">
+            Top Technical Expertise
+          </header>
           <p>
             We have a team of experienced writers, editors, and industry experts
             who work tirelessly to create accurate, engaging, informative, and
@@ -35,8 +56,8 @@ const About = () => {
           </p>
         </div>
 
-        <div className="text-center py-3">
-          <header className="text-3xl">
+        <div className={`${styles.card}`}>
+          <header className="text-3xl font-semibold">
             How We Stand Out As a Technical Content Marketing Agency
           </header>
           <p>
@@ -54,8 +75,10 @@ const About = () => {
           </p>
         </div>
 
-        <div className="text-center py-3">
-          <header className="text-3xl">But You Only Write, Right?</header>
+        <div className={`${styles.card}`}>
+          <header className="text-3xl font-semibold">
+            But You Only Write, Right?
+          </header>
           <p>
             Anyone who understands marketing will agree that writing anything
             does not necessarily mean you will sell. Let’s face it, you are in
@@ -68,8 +91,8 @@ const About = () => {
           </p>
         </div>
 
-        <div className="text-center py-3">
-          <header className="text-3xl">
+        <div className={`${styles.card}`}>
+          <header className="text-3xl font-semibold">
             Experience The Difference That High-Quality Content Can Make For
             Your Brand
           </header>
@@ -87,8 +110,8 @@ const About = () => {
           </p>
         </div>
 
-        <div className="text-center py-3">
-          <header className="text-3xl">
+        <div className={`${styles.card}`}>
+          <header className="text-3xl font-semibold">
             What Do You Do? What Do You Deliver?
           </header>
           <p>We prepare these deliverables:</p>
