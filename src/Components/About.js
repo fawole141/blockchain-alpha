@@ -19,10 +19,10 @@ const About = () => {
       </div>
 
       <div
-        className={`flex flex-col md:flex-row md:space-x-6 max-w-6xl px-5 mx-auto text-center`}
+        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-x-6 w-sm px-5 mx-auto text-center`}
       >
         <div
-          className={`flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/2`}
+          className={`flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3`}
         >
           <header className="text-3xl font-semibold">
             Why Blockchain Alpha?
