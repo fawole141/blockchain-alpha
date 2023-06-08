@@ -9,7 +9,7 @@ const About = () => {
       className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
       id="about"
     >
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between  w-full">
         <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center md:text-left my-8">
           ABOUT US
         </header>
@@ -18,12 +18,18 @@ const About = () => {
         </div>
       </div>
 
+      <p className={`${styles.paragraph} mb-12`}>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Necessitatibus, eum quaerat beatae voluptates rem doloremque explicabo
+        veritatis eaque voluptatum placeat. Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Necessitatibus, eum quaerat beatae
+        voluptates rem doloremque explicabo veritatis eaque voluptatum placeat.
+      </p>
+
       <div
-        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-x-6 w-sm px-5 mx-auto text-center`}
+        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-x-6 w-full px-5 mx-auto text-center text-[#F0F0F0]`}
       >
-        <div
-          className={`flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3`}
-        >
+        <div className="flex flex-col text-center w-full md:ml-[24px] p-6 space-y-6 rounded-lg bg-brand-color-1 ">
           <header className="text-3xl font-semibold">
             Why Blockchain Alpha?
           </header>
@@ -36,7 +42,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3">
+        <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             Top Technical Expertise
           </header>
@@ -50,7 +56,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3">
+        <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             How We Stand Out As a Technical Content Marketing Agency
           </header>
@@ -69,7 +75,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3">
+        <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             But You Only Write, Right?
           </header>
@@ -85,7 +91,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3">
+        <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             Experience The Difference That High-Quality Content Can Make For
             Your Brand
@@ -104,7 +110,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col text-center p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3">
+        <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             What Do You Do? What Do You Deliver?
           </header>
