@@ -9,11 +9,11 @@ const About = () => {
       className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
       id="about"
     >
-      <div className="flex justify-between  w-full">
-        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center md:text-left my-8">
+      <div className="flex justify-center items-center">
+        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-4">
           ABOUT US
         </header>
-        <div className="hidden md:block w-[15%] h-[15%]">
+        <div className="hidden md:block w-[7.5%] h-[7.5%]">
           <Lottie animationData={animationData} />
         </div>
       </div>
