@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { illustrations } from "../Assets";
 import styles from "./style";
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <section className="flex flex-col md:flex-row items-center px-12 mx-auto mt-0 py-8 space-y-0 md:space-y-0 bg-brand-color-1">
       <div className="flex flex-col mb-32 space-y-12 md:w-1/2">
@@ -17,8 +27,14 @@ const Hero = () => {
         </p>
 
         <div class="flex justify-center md:justify-start">
-          <button class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
-            <a href="#"> Get Started</a>
+          <button
+            class={`p-3 px-6 pt-3 text-white text-sm bg-brightRed rounded-full baseline hover:bg-brightRedLight ${
+              isHovered ? "transition-colors duration-300" : ""
+            } `}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <a href="#start"> Get Started</a>
           </button>
         </div>
       </div>

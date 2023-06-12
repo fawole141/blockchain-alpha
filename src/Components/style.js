@@ -16,7 +16,7 @@ const styles = {
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
 
-  card: "shadow-lg flex flex-col text-center w-full p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3",
+  card: "shadow-lg flex flex-col text-center text-xl w-full p-6 space-y-6 rounded-lg bg-brand-color-1 md:1/3",
 };
 
 export const layout = {

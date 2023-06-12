@@ -33,7 +33,7 @@ const About = () => {
           <header className="text-3xl font-semibold">
             Why Blockchain Alpha?
           </header>
-          <p>
+          <p className="text-xl">
             Anyone can write content, but not everyone can write with sound
             technical expertise and still maintain simplicity. At Blockchain
             Alpha, we execute technical content marketing strategies that
