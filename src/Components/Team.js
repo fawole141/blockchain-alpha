@@ -6,6 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { John, Mobi, Damilola, Victor, Micheal, Blankman } from "../Assets";
+import Lottie from "lottie-react";
+import animationData from "../Assets/team.json";
 
 const Team = () => {
   return (
@@ -15,11 +17,11 @@ const Team = () => {
     >
       <div className="flex justify-center items-center">
         <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] text-paleWhite leading-[66.8px] w-full text-center mt-0">
-          OUR TEAM
+          MEET OUR TEAM
         </header>
-        {/* <div className="hidden md:block w-[7.5%] h-[7.5%]">
+        <div className="hidden md:block w-[7.5%] h-[7.5%]">
           <Lottie animationData={animationData} />
-        </div> */}
+        </div>
       </div>
 
       <div

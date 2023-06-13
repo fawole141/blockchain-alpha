@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./style";
 import Lottie from "lottie-react";
 import animationData from "../Assets/about.json";
+import { text1 } from "./constants";
+import { text2 } from "./constants";
 
 const About = () => {
+  const [readMore, setReadMore] = useState(false);
   return (
     <div
       className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
@@ -34,11 +37,13 @@ const About = () => {
             Why Blockchain Alpha?
           </header>
           <p className="text-xl">
-            Anyone can write content, but not everyone can write with sound
-            technical expertise and still maintain simplicity. At Blockchain
-            Alpha, we execute technical content marketing strategies that
-            ultimately generate a fanatic audience who regularly swipe their
-            cards for your services.
+            {readMore ? text1 : `${text1.substring(0, 200)}...`}
+            <button
+              onClick={() => setReadMore(!readMore)}
+              className="font-bold"
+            >
+              {readMore ? "Show Less" : "Read More"}
+            </button>
           </p>
         </div>
 
@@ -47,12 +52,13 @@ const About = () => {
             Top Technical Expertise
           </header>
           <p>
-            We have a team of experienced writers, editors, and industry experts
-            who work tirelessly to create accurate, engaging, informative, and
-            relevant content for your target audience. We take pride in our
-            attention to detail and ability to deliver outstanding content. With
-            us, you can rest assured that your content needs are in capable
-            hands.
+            {readMore ? text2 : `${text2.substring(0, 200)}...`}
+            <button
+              onClick={() => setReadMore(!readMore)}
+              className="font-bold"
+            >
+              {readMore ? "Show Less" : "Read More"}
+            </button>
           </p>
         </div>
 
