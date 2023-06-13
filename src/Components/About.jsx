@@ -6,7 +6,7 @@ import animationData from "../Assets/about.json";
 const About = () => {
   return (
     <div
-      className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
+      className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark font-Matcha`}
       id="about"
     >
       <div className="flex justify-center items-center">

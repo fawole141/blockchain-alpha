@@ -1,9 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "DuplicateSans-Light";
+  src: local("DuplicateSans-Light")
+    url(./Font/DuplicateSans/DuplicateSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "DuplicateSans-Medium";
+  src: local("DuplicateSans-Medium")
+    url(./Font/DuplicateSans/DuplicateSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "DuplicateSans-Bold";
+  src: local("DuplicateSans-Bold")
+    url(./Font/DuplicateSans/DuplicateSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "matcha";
+  src: local("matcha") url(./Font/Matcha/matcha.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "DuplicateSans-Thin";
+  src: local("DuplicateSans-Thin")
+    url(./Font/DuplicateSans/DuplicateSans-Thin.ttf) format("truetype");
+}
 
 body {
   margin: 0;
@@ -12,21 +40,98 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Poppins', sans-serif;
-  font-size: 62.5%;
+  font-family: 'DuplicateSans-Medium' sans-serif;
+  font-size: 87.5%;
 }
 
-code {
-  font-family: 'Poppins', sans-serif;
+.specialButton {
+  --color: #a983f2;
+  margin: 0.5rem auto 1.5rem;
+  width: 10rem;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid var(--color);
+  font-family: inherit;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
 }
 
-.card{
-  height: 15rem;
-  width: 30rem;
-  background-color: #A983F2;
-  margin-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1.5rem;
+.specialButton::before,
+.specialButton::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.specialButton::before {
+  top: -1em;
+  left: -1em;
+}
+
+.specialButton::after {
+  left: calc(100% + 1rem);
+  top: calc(100% + 1rem);
+}
+
+.specialButton:hover::before,
+.button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.specialButton:hover {
+  color: rgb(246, 248, 249);
+}
+
+.specialButton:active {
+  filter: brightness(0.8);
+}
+
+.nav__link span {
+  font-size: 1rem;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.nav__link span span {
+  display: block;
+  transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav__link span::after {
+  content: attr(data-link-alt);
+  display: inline;
+  position: absolute;
+  transition: top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+.nav__link span:hover span {
+  transform: translateY(-100%);
+}
+
+.nav__link span:hover::after {
+  top: 0;
 }

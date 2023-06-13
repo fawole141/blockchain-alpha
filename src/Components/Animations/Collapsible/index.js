@@ -48,7 +48,7 @@ const Collapsible = ({ question, children }) => {
       {/* Answer Div  */}
       {isOpen && (
         <div
-          className={`h-[${height}px] overflow-hidden transition duration-1000 ease-in-out pt-4 px-4 py-2`}
+          className={` overflow-hidden transition-[${height}px] ease-in-out delay-500 duration-[3000ms]  pt-4 px-4 py-2`}
           ref={ref}
         >
           {children}

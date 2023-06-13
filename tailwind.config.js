@@ -1,4 +1,7 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -21,6 +24,31 @@ module.exports = {
         testDark: "#00040f",
         color2: "#00f6ff",
         paleWhite: "#F0F0F0",
+      },
+      fontFamily: {
+        DuplicateSansBold: [
+          "DuplicateSans-Bold",
+          ...defaultTheme.fontFamily.serif,
+        ],
+        DuplicateSansMedium: [
+          "DuplicateSans-Medium",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        DuplicateSansThin: [
+          "DuplicateSans-Thin",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        DuplicateSansLight: [
+          "DuplicateSans-Light",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        Matcha: ["Matcha", ...defaultTheme.fontFamily.sans],
+      },
+      boxShadow: {
+        'inputShadow': '2px 2px 15px #A983F2 inset',
+      },
+      transitionProperty: {
+        'height': 'height',
       },
     },
   },
