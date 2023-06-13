@@ -2,11 +2,29 @@ import React, { useState } from "react";
 import styles from "./style";
 import Lottie from "lottie-react";
 import animationData from "../Assets/about.json";
-import { text1 } from "./constants";
-import { text2 } from "./constants";
+import {
+  text1,
+  text2,
+  text3,
+  text3b,
+  htmlContent,
+  htmlContent2,
+  htmlContent3,
+} from "./constants";
 
 const About = () => {
   const [readMore, setReadMore] = useState(false);
+  const [readMore2, setReadMore2] = useState(false);
+  const [readMore3, setReadMore3] = useState(false);
+
+  const [showFullText, setShowFullText] = useState(false);
+  const [showFullText2, setShowFullText2] = useState(false);
+  const [showFullText3, setShowFullText3] = useState(false);
+
+  const handleReadMore = () => {
+    setShowFullText(!showFullText);
+  };
+
   return (
     <div
       className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
@@ -40,7 +58,7 @@ const About = () => {
             {readMore ? text1 : `${text1.substring(0, 200)}...`}
             <button
               onClick={() => setReadMore(!readMore)}
-              className="font-bold"
+              className="font-bold underline"
             >
               {readMore ? "Show Less" : "Read More"}
             </button>
@@ -52,12 +70,12 @@ const About = () => {
             Top Technical Expertise
           </header>
           <p>
-            {readMore ? text2 : `${text2.substring(0, 200)}...`}
+            {readMore2 ? text2 : `${text2.substring(0, 200)}...`}
             <button
-              onClick={() => setReadMore(!readMore)}
-              className="font-bold"
+              onClick={() => setReadMore2(!readMore2)}
+              className="font-bold underline"
             >
-              {readMore ? "Show Less" : "Read More"}
+              {readMore2 ? "Show Less" : "Read More"}
             </button>
           </p>
         </div>
@@ -66,35 +84,35 @@ const About = () => {
           <header className="text-3xl font-semibold">
             How We Stand Out As a Technical Content Marketing Agency
           </header>
-          <p>
-            Blockchain Alpha is purely a technical content marketing agency.
-          </p>
-          <ul>
-            <li>All our staff are developers </li>
-            <li> We participate in hackathons </li>
-            <li> We hold internal technical workshops </li>
-          </ul>
-          <p>
-            We write technical content from a place of experience and solid
-            research, and that is why our clients keep coming back for more. Fun
-            fact: We built this website ourself!
-          </p>
+          <div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: showFullText
+                  ? htmlContent
+                  : htmlContent.slice(0, 200) + "...",
+              }}
+            ></div>
+            {htmlContent.length > 200 && (
+              <button onClick={handleReadMore} className="font-bold underline">
+                {showFullText ? "See Less" : "Read More"}
+              </button>
+            )}
+          </div>
         </div>
 
         <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             But You Only Write, Right?
           </header>
-          <p>
-            Anyone who understands marketing will agree that writing anything
-            does not necessarily mean you will sell. Let’s face it, you are in
-            business to make money right?
-          </p>
-          <p>
-            At Blockchain Alpha, we don’t “just write.” We create technical
-            content strategies that will make people know your product and pay
-            for it. In short, we are your partner in increasing revenues!
-          </p>
+          <div className="flex flex-col space-y-2">
+            {readMore3 ? text3 + text3b : `${text3.substring(0, 200)}...`}
+            <button
+              onClick={() => setReadMore3(!readMore3)}
+              className="font-bold underline"
+            >
+              {readMore3 ? " Show Less" : "Read More"}
+            </button>
+          </div>
         </div>
 
         <div className={`${styles.card}`}>
@@ -102,37 +120,47 @@ const About = () => {
             Experience The Difference That High-Quality Content Can Make For
             Your Brand
           </header>
-          <p>
-            At Blockchain Alpha, we are committed to delivering high-quality
-            technical content that surpasses your expectations. We understand
-            the importance of unique content in today's digital landscape, and
-            we never compromise on quality.
-          </p>
-          <p>
-            If you are unsatisfied with our content, we offer a revision process
-            to ensure your utmost satisfaction. We value your feedback and will
-            work closely with you to make any necessary adjustments until you
-            are delighted with the final result.
-          </p>
+
+          <div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: showFullText2
+                  ? htmlContent2
+                  : htmlContent2.slice(0, 200) + "...",
+              }}
+            ></div>
+            {htmlContent2.length > 200 && (
+              <button
+                onClick={() => setShowFullText2(!showFullText2)}
+                className="font-bold underline"
+              >
+                {showFullText2 ? "See Less" : "Read More"}
+              </button>
+            )}
+          </div>
         </div>
 
         <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             What Do You Do? What Do You Deliver?
           </header>
-          <p>We prepare these deliverables:</p>
-          <ul>
-            <li>Technical documentation</li>
-            <li>Whitepaper and litepapers</li>
-            <li>Technical tutorials and guides</li>
-            <li>Press Releases</li>
-            <li>Content Marketing Plan</li>
-          </ul>
-          <p>
-            We write technical content from a place of experience and solid
-            research, and that is why our clients keep coming back for more. Fun
-            fact: We built this website ourself!
-          </p>
+          <div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: showFullText3
+                  ? htmlContent3
+                  : htmlContent3.slice(0, 200) + "...",
+              }}
+            ></div>
+            {htmlContent3.length > 200 && (
+              <button
+                onClick={() => setShowFullText3(!showFullText3)}
+                className="font-bold underline"
+              >
+                {showFullText3 ? "See Less" : "Read More"}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
