@@ -1,4 +1,19 @@
 import illustrations from "./illustrations.svg";
 import about from "./about.json";
+import Damilola from "./Damilola-crop.jpg";
+import John from "./John Fawole.jpg";
+import Victor from "./victor-image-crop.jpg";
+import Micheal from "./Michael Fawole-crop.jpg";
+import Mobi from "./Mobi-crop.jpg";
+import Blankman from "./profile.jpg";
 
-export { illustrations, about };
+export {
+  illustrations,
+  about,
+  Damilola,
+  John,
+  Victor,
+  Micheal,
+  Mobi,
+  Blankman,
+};
