@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         "brand-color-1": "#A983F2",
         natural: "#FFFFFF",
-        brightRed: "hsl(12, 88%, 59%)",
+        brightRed: "#FF7A3F",
         brightRedLight: "hsl(12, 88%, 69%)",
         brightRedSupLight: "hsl(12, 88%, 95%)",
         darkBlue: "hsl(228, 39%, 23%)",
