@@ -1,7 +1,7 @@
 import React from "react";
 import { illustrations } from "../Assets";
 import styles from "./style";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
 
         <div class="flex justify-center md:justify-start">
           <button class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
-            <Link to={"/#start"}> Get Started</Link>
+            <Link to={"#start"}> Get Started</Link>
           </button>
         </div>
       </div>
