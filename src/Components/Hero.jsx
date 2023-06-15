@@ -17,8 +17,8 @@ const Hero = () => {
           crypto companies, blockchains, startups, DAOs, and DeFi protocols.
         </p>
 
-        <div class="flex justify-center md:justify-start">
-          <button class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
+        <div className="flex justify-center md:justify-start">
+          <button className="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
             <Link to={"/#start"}> Get Started</Link>
           </button>
         </div>

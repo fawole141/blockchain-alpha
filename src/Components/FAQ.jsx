@@ -2,7 +2,7 @@ import React from "react";
 import logo3 from "../Assets/logo3.png";
 import Collapsible from "./Animations/Collapsible";
 import AnimateInView from "./Animations/AnimateInView";
-import { container, fade } from "./Animations/AnimationVariants";
+import { fade } from "./Animations/AnimationVariants";
 import AnimatedText from "./Animations/AnimatedText";
 
 const FAQ = () => {
@@ -52,19 +52,19 @@ const FAQ = () => {
           </div>
         {/* </AnimateInView> */}
 
-        <div className="grid grid-flow-col space-x-24 px-16 pt-4 pb-8">
+        <div className="grid  md:grid-cols-12 md:px-16 sm:px-8 pt-4 pb-8 sm:grid-cols-1">
           {/* Div on the left  */}
-          <div className="w-72 h72 flex flex-col justify-center">
+          <div className="w-64 col-span-4 md:visible md:flex md:flex-col md:justify-center sm:invisible sm:hidden">
             <img src={logo3} alt="blockchain alpha logo" loading="lazy" />
           </div>
 
           {/* Div on the right  */}
-          <div>
+          <div className="col-span-8">
             {/* Each FAQ  */}
 
             {FAQArray.map((FAQ) => {
               return (
-                <Collapsible key={FAQ.id} question={FAQ.question}>
+                <Collapsible   key={FAQ.id} question={FAQ.question}>
                   <span className="">{FAQ.answer}</span>
                 </Collapsible>
               );

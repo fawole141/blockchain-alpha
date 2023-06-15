@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { AiFillDownCircle, AiFillUpCircle } from "react-icons/ai";
 
 const Collapsible = ({ question, children }) => {
   const [height, setHeight] = useState(0);
@@ -38,17 +39,18 @@ const Collapsible = ({ question, children }) => {
     >
       {/* Question Div  */}
       <div
-        className={`text-3xl ${
+        className={`md:text-3xl sm:text-lg ${
           isOpen && "border-b"
-        } px-6 py-4 flex justify-between cursor-pointer`}
+        } px-6 py-4 flex justify-between items-center cursor-pointer`}
       >
-        <span>{question}</span> <span>V</span>
+        <span>{question}</span>{" "}
+        <span className="align-middle ml-4">{isOpen ? <AiFillUpCircle /> : <AiFillDownCircle />}</span>
       </div>
 
       {/* Answer Div  */}
       {isOpen && (
         <div
-          className={` overflow-hidden transition-[${height}px] ease-in-out delay-500 duration-[3000ms]  pt-4 px-4 py-2`}
+          className={` overflow-hidden ease-in-out delay-500 duration-[3000ms] pt-4 px-4 py-2`}
           ref={ref}
         >
           {children}

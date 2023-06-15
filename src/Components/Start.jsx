@@ -6,11 +6,11 @@ import { fade } from "./Animations/AnimationVariants";
 // import "@sweetalert2/theme-dark/dark.css";
 
 const Start = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const sendMail = (e) => {
+  const sendMail = async (e) => {
     e.preventDefault();
     if (!name) {
       Swal.fire({
@@ -49,12 +49,13 @@ const Start = () => {
         message: message,
       };
 
+
       emailjs
         .send(
-          "service_tpbdk4p",
-          "template_tx4a60o",
+          "service_hltbynl",
+          "template_a4t5q7g",
           template,
-          "ZvKlz0_aP9a9pdb2e"
+          "XSvyuDFOjADNqUNfg"
         )
         .then(
           (result) => {
@@ -90,51 +91,53 @@ const Start = () => {
 
   return (
     <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
-    <div className="w-[60%] mx-auto my-0" id={"start"}>
-      <h2 className="text-center text-5xl text-brand-color-1 py-8">Get In Touch</h2>
-      <form
-        className="flex flex-col justify-center"
-        onSubmit={(e) => sendMail(e)}
-      >
-        <div className="flex justify-between">
-          <input
-            type={"text"}
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            className="mr-8 text-white w-full text-lg border-2 border-brand-color-1 rounded-lg py-[20px] px-[25px] bg-transparent mb-4 active:shadow-inputShadow "
-            placeholder="Provide Your Name"
-            name="from_name"
-          />
-          <input
-            type={"text"}
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            className="text-white text-lg w-full border-2 border-brand-color-1 rounded-lg py-[20px] px-[25px] bg-transparent  mb-4 active:shadow-inputShadow"
-            placeholder="Provide Your Email"
-            name="from_email"
-          />
-        </div>
-        <textarea
-          className="text-white text-lg h-40 border-2 border-brand-color-1 rounded-lg py-[10px] px-[25px] bg-transparent mb-4 active:shadow-inputShadow placeholder:text-[larger]"
-          value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-          placeholder="Leave A Message"
-          name="message"
-        />
-        <button
-          className="specialButton"
-          type="submit"
+      <div className="md:w-[60%] sm:w-full mx-auto my-0" id={"start"}>
+        <h2 className="text-center text-5xl text-brand-color-1 py-8">
+          Get In Touch
+        </h2>
+        <form
+          className="flex flex-col justify-center sm:mx-8"
+          onSubmit={(e) => sendMail(e)}
         >
-          Send
-        </button>
-      </form>
-    </div>
+          <div className="md:flex md:flex-row md:justify-between sm:flex-col">
+            <input
+              type={"text"}
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              className="md:mr-8 text-white w-full text-lg border-2 border-brand-color-1 rounded-lg py-[20px] px-[25px] bg-transparent mb-4 active:shadow-inputShadow "
+              placeholder="Provide Your Name"
+              name="from_name"
+            />
+            <input
+              type={"text"}
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              className="text-white text-lg w-full border-2 border-brand-color-1 rounded-lg py-[20px] px-[25px] bg-transparent  mb-4 active:shadow-inputShadow"
+              placeholder="Provide Your Email"
+              name="from_email"
+            />
+          </div>
+          <textarea
+            className="text-white text-lg  md:mx-0 h-40 border-2 border-brand-color-1 rounded-lg py-[10px] px-[25px] bg-transparent mb-4 active:shadow-inputShadow placeholder:text-[larger]"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            placeholder="Leave A Message"
+            name="message"
+          />
+          <button
+            className="specialButton md:w-[10rem] sm:w-full sm:mx-auto"
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
+      </div>
     </AnimateInView>
   );
 };
