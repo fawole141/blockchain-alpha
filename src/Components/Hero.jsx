@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center px-16 mx-auto mt-0 py-8 space-y-0 md:space-y-0 bg-brand-color-1">
+    <section className="flex flex-col md:flex-row items-center px-6 md:px-16 mx-auto mt-0 py-8 space-y-0 md:space-y-0 bg-brand-color-1">
       <div className="flex flex-col mb-32 space-y-12 md:w-1/2">
         <h1 className="max-w-sm text-4xl font-bold text-white text-center md:max-w-[800px] md:text-5xl md:text-left">
           Where you need to be for quality content and top-notch marketing

@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import { John, Mobi, Damilola, Victor, Micheal, Blankman } from "../Assets";
+import { John, Mobi, Damilola, Victor, Micheal, Blankman, Timilehin } from "../Assets";
 
 const Team = () => {
   return (
@@ -22,7 +22,7 @@ const Team = () => {
       <div
         className={`mt-12 mx-4 md:mx-0 flex flex-col gap-y-4 space-y-4 md:space-y-0 md:grid md:grid-cols-4 md:gap-6 md:space-x-6`}
       >
-        <div className="md:ml-[24px]">
+        <div className="md:ml-[24px] shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -42,7 +42,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div>
+        <div className="shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -62,7 +62,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div>
+        <div className="shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -82,7 +82,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div>
+        <div className="shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -96,13 +96,13 @@ const Team = () => {
                   Edozie Chimaobi
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Smart Contract Developer and Technical Writer
+                  Smart-Contract, Frontend Developer and Technical Writer
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </div>
-        <div>
+        <div className="shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -116,13 +116,13 @@ const Team = () => {
                   Micheal Fawole
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Full-stack Website Developer and Technical Writer
+                  Full-stack Web Developer and Technical Writer
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </div>
-        <div>
+        <div className="shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -142,7 +142,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div>
+        <div className="shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -162,14 +162,14 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div>
+        <div className="shadow-xl">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="140"
                 width="300"
-                image={Blankman}
+                image={Timilehin}
                 alt="John Image"
               />
               <CardContent>
@@ -177,7 +177,7 @@ const Team = () => {
                   Timilehin Okunola
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Frontend Developer and Technical Writer
+                  Fullstack Developer and Technical Writer
                 </Typography>
               </CardContent>
             </CardActionArea>

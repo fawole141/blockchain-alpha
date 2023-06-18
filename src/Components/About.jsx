@@ -31,7 +31,7 @@ const About = () => {
       id="about"
     >
       <div className="flex justify-center items-center">
-        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-4">
+        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-0 md:my-4">
           ABOUT US
         </header>
         <div className="hidden md:block w-[7.5%] h-[7.5%]">
@@ -39,7 +39,7 @@ const About = () => {
         </div>
       </div>
 
-      <p className={`${styles.paragraph} mb-12`}>
+      <p className={`${styles.paragraph} mb-12 text-center mt-2`}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Necessitatibus, eum quaerat beatae voluptates rem doloremque explicabo
         veritatis eaque voluptatum placeat. Lorem ipsum dolor, sit amet
@@ -48,9 +48,9 @@ const About = () => {
       </p>
 
       <div
-        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-x-6 w-full px-5 mx-auto text-center text-[#F0F0F0]`}
+        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-6 w-full mx-auto justify-start text-center  text-[#F0F0F0]`}
       >
-        <div className="flex flex-col text-center w-full md:ml-[24px] p-6 space-y-6 rounded-lg bg-brand-color-1 ">
+        <div className={`${styles.card}`}>
           <header className="text-3xl font-semibold">
             Why Blockchain Alpha?
           </header>
@@ -65,7 +65,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className={`${styles.card}`}>
+        <div className={`${styles.card} `}>
           <header className="text-3xl font-semibold">
             Top Technical Expertise
           </header>
