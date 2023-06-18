@@ -23,7 +23,7 @@ const Collapsible = ({ question, children }) => {
   useEffect(() => {
     if (isOpen) setHeight(ref.current?.scrollHeight);
   }, [isOpen]);
-
+  
   const handleFilterOpening = () => {
     setIsOpen((prev) => !prev);
     if (isOpen) {
@@ -50,7 +50,7 @@ const Collapsible = ({ question, children }) => {
       {/* Answer Div  */}
       {isOpen && (
         <div
-          className={` overflow-hidden ease-in-out delay-500 duration-[3000ms] pt-4 px-4 py-2`}
+          className={`text-lg overflow-hidden {h-[${height}px] ease-in-out delay-500 duration-[3000ms]} pt-4 px-4 pb-3`}
           ref={ref}
         >
           {children}

@@ -2,13 +2,14 @@ import React from "react";
 import logo2 from "../Assets/logo2.png";
 import AnimateInView from "./Animations/AnimateInView";
 import { fade } from "./Animations/AnimationVariants";
+// import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     // <!-- Footer container -->
     <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
-    <footer className="bg-black text-center text-natural lg:text-left">
-      {/* <div className="flex items-center justify-center border-b-2 border-neutral-200 py-6 px-16 lg:justify-between">
+      <footer className="bg-black text-center text-natural lg:text-left">
+        {/* <div className="flex items-center justify-center border-b-2 border-neutral-200 py-6 px-16 lg:justify-between">
         <div className="mr-12 hidden text-natural lg:block">
           <span>Get connected with us on social networks:</span>
         </div> */}
@@ -57,89 +58,66 @@ const Footer = () => {
         </div>
       </div> */}
 
-      {/* <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
-      <div className="mx-6 py-10 text-center md:text-left px-10">
-        <div className=" grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {/* <!-- Tailwind Elements section --> */}
-          <div className="text-natural">
-            <img
-              className="mb-4"
-              src={logo2}
-              style={{ height: "30px" }}
-              alt=""
-              loading="lazy"
-            />
-            <p>
-              This is a placeholder paragraph I just put there for the maintime
-              and lets see how it works out for the site
-            </p>
-          </div>
-          {/* <!-- Products section --> */}
-          <div className="">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Products
-            </h6>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Angular
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                React
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Vue
-              </a>
-            </p>
-            <p>
-              <a href="#!" className="text-natural">
-                Laravel
-              </a>
-            </p>
-          </div>
-          {/* <!-- Useful links section --> */}
-          <div className="">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Useful links
-            </h6>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Home
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                About
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Team
-              </a>
-            </p>
-            <p>
-              <a href="#!" className="text-natural">
-                Start
-              </a>
-            </p>
+        {/* <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
+        <div className="mx-6 py-10 text-center md:text-left px-10">
+          <div className=" flex justify-between ">
+            {/* <!-- Tailwind Elements section --> */}
+            <div className="text-natural">
+              <img
+                className="mb-4"
+                src={logo2}
+                style={{ height: "30px" }}
+                alt=""
+                loading="lazy"
+              />
+              <p>
+                This is a placeholder paragraph I just put there for the
+                maintime and lets see how it works out for the site
+              </p>
+            </div>
+
+            {/* <!-- Useful links section --> */}
+            {/* <div className="">
+              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                Useful links
+              </h6>
+              <p className="mb-4">
+                <Link to="#about" smooth className="text-natural">
+                  About
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link to="#team" smooth className="text-natural">
+                  Team
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link to="#start" smooth className="text-natural">
+                  Start
+                </Link>
+              </p>
+              <p>
+                <Link to="#faqs" smooth className="text-natural">
+                  FAQ
+                </Link>
+              </p>
+            </div> */}
           </div>
         </div>
-      </div>
 
-      {/* <!--Copyright section--> */}
-      <div className="bg-black text-natural p-6 text-center">
-        <span>© 2023 Copyright: </span>
-        <a className="font-semibold text-brand-color-1" href="https://blockchainalpha.com/">
-          Blockchain Alpha
-        </a>
-      </div>
-    </footer>
+        {/* <!--Copyright section--> */}
+        <div className="bg-black text-natural p-6 text-center">
+          <span>© 2023 Copyright: </span>
+          <a
+            className="font-semibold text-brand-color-1"
+            href="https://blockchainalpha.com/"
+          >
+            Blockchain Alpha
+          </a>
+        </div>
+      </footer>
     </AnimateInView>
   );
-
 };
 
 export default Footer;

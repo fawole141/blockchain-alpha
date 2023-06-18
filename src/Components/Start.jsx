@@ -9,9 +9,11 @@ const Start = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendMail = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (!name) {
       Swal.fire({
         title: "Error!",
@@ -22,6 +24,7 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
+      setIsLoading(false)
     } else if (!email) {
       Swal.fire({
         title: "Error!",
@@ -32,6 +35,7 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
+      setIsLoading(false)
     } else if (!message) {
       Swal.fire({
         title: "Error!",
@@ -42,13 +46,13 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
+      setIsLoading(false)
     } else {
       const template = {
         from_name: name,
         from_email: email,
         message: message,
       };
-
 
       emailjs
         .send(
@@ -69,6 +73,7 @@ const Start = () => {
               background: "#1E1E1E",
               color: "white",
             });
+            setIsLoading(false)
           },
           (error) => {
             console.log(error.text);
@@ -81,6 +86,7 @@ const Start = () => {
               background: "#1E1E1E",
               color: "white",
             });
+            setIsLoading(false)
           }
         );
       setEmail("");
@@ -134,7 +140,7 @@ const Start = () => {
             className="specialButton md:w-[10rem] sm:w-full sm:mx-auto"
             type="submit"
           >
-            Send
+            {isLoading ? "Sending...." : "Send"}
           </button>
         </form>
       </div>

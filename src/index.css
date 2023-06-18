@@ -94,6 +94,29 @@ body {
   width: 410px;
 }
 
+@media screen and (max-width: 480px){
+
+  .specialButton::before,
+.specialButton::after {
+  width: 50px;
+  height: 50px;
+}
+
+.specialButton::before
+ {
+  left: calc(40%);
+  top: calc(100% + 4rem);
+}
+
+
+
+  .specialButton:hover::before,
+.button:hover::after {
+  height: 410px;
+  width: 500px;
+}
+}
+
 .specialButton:hover {
   color: rgb(246, 248, 249);
 }
