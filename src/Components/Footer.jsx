@@ -2,6 +2,7 @@ import React from "react";
 import logo2 from "../Assets/logo2.png";
 import AnimateInView from "./Animations/AnimateInView";
 import { fade } from "./Animations/AnimationVariants";
+import { Link } from "react-router-dom";
 // import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
@@ -60,48 +61,68 @@ const Footer = () => {
 
         {/* <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
         <div className="mx-6 py-10 text-center md:text-left px-10">
-          <div className=" flex justify-between ">
+          <div className=" flex md:flex-row sm:flex-col sm:space-y-16 md:space-y-0 justify-between ">
             {/* <!-- Tailwind Elements section --> */}
             <div className="text-natural">
               <img
                 className="mb-4"
                 src={logo2}
-                style={{ height: "30px" }}
+                style={{ height: "40px" }}
                 alt=""
                 loading="lazy"
               />
-              <p>
-                This is a placeholder paragraph I just put there for the
-                maintime and lets see how it works out for the site
-              </p>
+              <p>Your Best Marketing Partner in Web3</p>
             </div>
 
             {/* <!-- Useful links section --> */}
-            {/* <div className="">
-              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                Useful links
-              </h6>
-              <p className="mb-4">
-                <Link to="#about" smooth className="text-natural">
-                  About
-                </Link>
-              </p>
-              <p className="mb-4">
-                <Link to="#team" smooth className="text-natural">
-                  Team
-                </Link>
-              </p>
-              <p className="mb-4">
-                <Link to="#start" smooth className="text-natural">
-                  Start
-                </Link>
-              </p>
-              <p>
-                <Link to="#faqs" smooth className="text-natural">
-                  FAQ
-                </Link>
-              </p>
-            </div> */}
+            <div className="flex flex-col">
+              <div>
+                <h5 className="sm:mb-6 md:mb-3 flex justify-center font-semibold uppercase md:justify-start">
+                  Useful links
+                </h5>
+              </div>
+              <div className="flex md:flex-row sm:flex-col sm:space-y-2 md:space-y-0 md:space-x-6">
+                <p className="">
+                  <Link
+                    to="#about"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    What We Do
+                  </Link>
+                </p>
+
+                <p className="">
+                  <Link
+                    to="#"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    Media Asset
+                  </Link>
+                </p>
+
+                <p className="">
+                  <Link
+                    to="#team"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    Team
+                  </Link>
+                </p>
+
+                <p>
+                  <Link
+                    to="#start"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    Reach Out
+                  </Link>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

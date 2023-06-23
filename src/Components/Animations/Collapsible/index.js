@@ -23,7 +23,7 @@ const Collapsible = ({ question, children }) => {
   useEffect(() => {
     if (isOpen) setHeight(ref.current?.scrollHeight);
   }, [isOpen]);
-  
+
   const handleFilterOpening = () => {
     setIsOpen((prev) => !prev);
     if (isOpen) {
@@ -44,7 +44,9 @@ const Collapsible = ({ question, children }) => {
         } px-6 py-4 flex justify-between items-center cursor-pointer`}
       >
         <span>{question}</span>{" "}
-        <span className="align-middle ml-4">{isOpen ? <AiFillUpCircle /> : <AiFillDownCircle />}</span>
+        <span className="align-middle ml-4">
+          {isOpen ? <AiFillUpCircle /> : <AiFillDownCircle />}
+        </span>
       </div>
 
       {/* Answer Div  */}

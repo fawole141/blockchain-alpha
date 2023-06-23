@@ -5,8 +5,12 @@ function AnimateInView({children, ...props}) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
+    console.log(inView)
     if (inView) {
       controls.start("visible");
+    }
+    else {
+      controls.set("hidden")
     }
   }, [controls, inView]);
   return (
