@@ -2,13 +2,15 @@ import React from "react";
 import logo2 from "../Assets/logo2.png";
 import AnimateInView from "./Animations/AnimateInView";
 import { fade } from "./Animations/AnimationVariants";
+import { Link } from "react-router-dom";
+// import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     // <!-- Footer container -->
     <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
-    <footer className="bg-black text-center text-natural lg:text-left">
-      {/* <div className="flex items-center justify-center border-b-2 border-neutral-200 py-6 px-16 lg:justify-between">
+      <footer className="bg-black text-center text-natural lg:text-left">
+        {/* <div className="flex items-center justify-center border-b-2 border-neutral-200 py-6 px-16 lg:justify-between">
         <div className="mr-12 hidden text-natural lg:block">
           <span>Get connected with us on social networks:</span>
         </div> */}
@@ -57,89 +59,86 @@ const Footer = () => {
         </div>
       </div> */}
 
-      {/* <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
-      <div className="mx-6 py-10 text-center md:text-left px-10">
-        <div className=" grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {/* <!-- Tailwind Elements section --> */}
-          <div className="text-natural">
-            <img
-              className="mb-4"
-              src={logo2}
-              style={{ height: "30px" }}
-              alt=""
-              loading="lazy"
-            />
-            <p>
-              This is a placeholder paragraph I just put there for the maintime
-              and lets see how it works out for the site
-            </p>
-          </div>
-          {/* <!-- Products section --> */}
-          <div className="">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Products
-            </h6>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Angular
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                React
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Vue
-              </a>
-            </p>
-            <p>
-              <a href="#!" className="text-natural">
-                Laravel
-              </a>
-            </p>
-          </div>
-          {/* <!-- Useful links section --> */}
-          <div className="">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Useful links
-            </h6>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Home
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                About
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-natural">
-                Team
-              </a>
-            </p>
-            <p>
-              <a href="#!" className="text-natural">
-                Start
-              </a>
-            </p>
+        {/* <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
+        <div className="mx-6 py-10 text-center md:text-left px-10">
+          <div className=" flex md:flex-row sm:flex-col sm:space-y-16 md:space-y-0 justify-between ">
+            {/* <!-- Tailwind Elements section --> */}
+            <div className="text-natural">
+              <img
+                className="mb-4"
+                src={logo2}
+                style={{ height: "40px" }}
+                alt=""
+                loading="lazy"
+              />
+              <p>Your Best Marketing Partner in Web3</p>
+            </div>
+
+            {/* <!-- Useful links section --> */}
+            <div className="flex flex-col">
+              <div>
+                <h5 className="sm:mb-6 md:mb-3 flex justify-center font-semibold uppercase md:justify-start">
+                  Useful links
+                </h5>
+              </div>
+              <div className="flex md:flex-row sm:flex-col sm:space-y-2 md:space-y-0 md:space-x-6">
+                <p className="">
+                  <Link
+                    to="#about"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    What We Do
+                  </Link>
+                </p>
+
+                <p className="">
+                  <Link
+                    to="#"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    Media Asset
+                  </Link>
+                </p>
+
+                <p className="">
+                  <Link
+                    to="#team"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    Team
+                  </Link>
+                </p>
+
+                <p>
+                  <Link
+                    to="#start"
+                    smooth
+                    className="text-natural hover:text-brand-color-1"
+                  >
+                    Reach Out
+                  </Link>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* <!--Copyright section--> */}
-      <div className="bg-black text-natural p-6 text-center">
-        <span>© 2023 Copyright: </span>
-        <a className="font-semibold text-brand-color-1" href="https://blockchainalpha.com/">
-          Blockchain Alpha
-        </a>
-      </div>
-    </footer>
+        {/* <!--Copyright section--> */}
+        <div className="bg-black text-natural p-6 text-center">
+          <span>© 2023 Copyright: </span>
+          <a
+            className="font-semibold text-brand-color-1"
+            href="https://blockchainalpha.com/"
+          >
+            Blockchain Alpha
+          </a>
+        </div>
+      </footer>
     </AnimateInView>
   );
-
 };
 
 export default Footer;

@@ -44,13 +44,15 @@ const Collapsible = ({ question, children }) => {
         } px-6 py-4 flex justify-between items-center cursor-pointer`}
       >
         <span>{question}</span>{" "}
-        <span className="align-middle ml-4">{isOpen ? <AiFillUpCircle /> : <AiFillDownCircle />}</span>
+        <span className="align-middle ml-4">
+          {isOpen ? <AiFillUpCircle /> : <AiFillDownCircle />}
+        </span>
       </div>
 
       {/* Answer Div  */}
       {isOpen && (
         <div
-          className={` overflow-hidden ease-in-out delay-500 duration-[3000ms] pt-4 px-4 py-2`}
+          className={`text-lg overflow-hidden {h-[${height}px] ease-in-out delay-500 duration-[3000ms]} pt-4 px-4 pb-3`}
           ref={ref}
         >
           {children}

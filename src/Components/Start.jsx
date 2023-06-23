@@ -3,15 +3,18 @@ import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 import AnimateInView from "./Animations/AnimateInView";
 import { fade } from "./Animations/AnimationVariants";
+import AnimatedText from "./Animations/AnimatedText";
 // import "@sweetalert2/theme-dark/dark.css";
 
 const Start = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendMail = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (!name) {
       Swal.fire({
         title: "Error!",
@@ -22,6 +25,7 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
+      setIsLoading(false)
     } else if (!email) {
       Swal.fire({
         title: "Error!",
@@ -32,6 +36,7 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
+      setIsLoading(false)
     } else if (!message) {
       Swal.fire({
         title: "Error!",
@@ -42,13 +47,13 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
+      setIsLoading(false)
     } else {
       const template = {
         from_name: name,
         from_email: email,
         message: message,
       };
-
 
       emailjs
         .send(
@@ -69,6 +74,7 @@ const Start = () => {
               background: "#1E1E1E",
               color: "white",
             });
+            setIsLoading(false)
           },
           (error) => {
             console.log(error.text);
@@ -81,6 +87,7 @@ const Start = () => {
               background: "#1E1E1E",
               color: "white",
             });
+            setIsLoading(false)
           }
         );
       setEmail("");
@@ -89,12 +96,16 @@ const Start = () => {
     }
   };
 
+  const STARTHeader = [{ type: "heading2", text: "Get In Touch" }];
+
   return (
     <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
       <div className="md:w-[60%] sm:w-full mx-auto my-0" id={"start"}>
-        <h2 className="text-center text-5xl text-brand-color-1 py-8">
-          Get In Touch
-        </h2>
+        <div className="text-center text-5xl text-brand-color-1 py-8">
+        {STARTHeader.map((item, index) => {
+              return <AnimatedText {...item} key={index} />;
+            })}
+        </div>
         <form
           className="flex flex-col justify-center sm:mx-8"
           onSubmit={(e) => sendMail(e)}
@@ -134,7 +145,7 @@ const Start = () => {
             className="specialButton md:w-[10rem] sm:w-full sm:mx-auto"
             type="submit"
           >
-            Send
+            {isLoading ? "Sending...." : "Send"}
           </button>
         </form>
       </div>

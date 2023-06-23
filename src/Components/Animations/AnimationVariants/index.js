@@ -4,8 +4,8 @@ export const fade = {
       opacity: 1,
       transition: {
         type: "spring",
-        duration: 2,
-        delay: 1,
+        duration: 1.5,
+        delay: 0.25,
       },
     },
   };

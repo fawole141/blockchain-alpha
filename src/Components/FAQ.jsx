@@ -42,7 +42,7 @@ const FAQ = () => {
   const FAQHeader = [{ type: "heading1", text: "FAQ" }];
 
   return (
-    <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
+    <AnimateInView initial={{ opacity: 0, y: 5, zIndex: -1 }} variants={fade}>
       <div className=" text-natural mt-24" id="faqs">
         {/* <AnimateInView initial="hidden" variants={container}> */}
           <div className="text-center text-4xl text-natural mb-8">
