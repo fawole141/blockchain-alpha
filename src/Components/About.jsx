@@ -27,11 +27,11 @@ const About = () => {
 
   return (
     <div
-      className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark font-Matcha`}
+      className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
       id="about"
     >
       <div className="flex justify-center items-center">
-        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-0 md:my-4">
+        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-0">
           ABOUT US
         </header>
         <div className="hidden md:block w-[7.5%] h-[7.5%]">

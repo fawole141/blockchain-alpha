@@ -44,6 +44,28 @@ body {
   font-size: 87.5%;
 }
 
+.heroo{
+  /* background-image: linear-gradient(145.96deg, rgb(65, 10, 182) 5.07%, rgb(91, 255, 64) 100%); */
+  background-image: linear-gradient(120.96deg, #00FFDA 0%, #000000 40%, #A983F2 100%);
+}
+
+.hero-logo{
+  margin-top: -2rem;
+  margin-left: 10rem;
+}
+
+.hero-logo2{
+  margin-top: -2rem;
+  margin-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+.position-ill{
+  position: absolute;
+  right: 10px;
+  bottom: -250px;
+}
+
 .specialButton {
   --color: #a983f2;
   margin: 0.5rem auto 1.5rem;

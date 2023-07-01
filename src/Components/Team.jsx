@@ -1,28 +1,46 @@
 import React from "react";
 import styles from "./style";
 import Card from "@mui/material/Card";
+import { createTheme, ThemeProvider } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { John, Mobi, Damilola, Victor, Micheal, Blankman, Timilehin } from "../Assets";
 
+const theme  =  createTheme({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#f33316',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+    background: {
+      paper: '#A983F2',
+    },
+  }
+}
+);
+
 const Team = () => {
   return (
-    <div
-      className={`${styles.paddingX} ${styles.paddingY} bg-brand-color-1 text-testDark`}
+    <ThemeProvider theme={theme}>
+      <div
+      className={`${styles.paddingX} ${styles.paddingY} bg-veryDarkBlue text-testDark`}
       id="team"
     >
       <div className="flex justify-center items-center">
         <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] text-paleWhite leading-[66.8px] w-full text-center mt-0">
-          MEET OUR TEAM
+          OUR TEAM
         </header>
       </div>
 
       <div
         className={`mt-12 mx-4 md:mx-0 flex flex-col gap-y-4 space-y-4 md:space-y-0 md:grid md:grid-cols-4 md:gap-6 md:space-x-6`}
       >
-        <div className="md:ml-[24px] shadow-xl">
+        <div className="md:ml-[24px] shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -42,7 +60,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div className="shadow-xl">
+        <div className="shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -62,7 +80,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div className="shadow-xl">
+        <div className="shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -82,7 +100,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div className="shadow-xl">
+        <div className="shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -102,7 +120,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div className="shadow-xl">
+        <div className="shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -122,7 +140,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div className="shadow-xl">
+        <div className="shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -142,7 +160,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div className="shadow-xl">
+        <div className="shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -162,7 +180,7 @@ const Team = () => {
             </CardActionArea>
           </Card>
         </div>
-        <div className="shadow-xl">
+        <div className="shadow-sm shadow-[#A983F2]">
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -185,6 +203,8 @@ const Team = () => {
         </div>
       </div>
     </div>
+    </ThemeProvider>
+    
   );
 };
 

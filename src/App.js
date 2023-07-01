@@ -9,7 +9,7 @@ import Team from "./Components/Team";
 
 function App() {
   return (
-    <div className="App bg-black scroll-smooth">
+    <div className="App bg-veryDarkBlue scroll-smooth">
       <Header />
       <Hero />
       <About />
