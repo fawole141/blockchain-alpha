@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="md:hidden">
         <img
           src={logo}
-          alt="Illustrations-main"
+          alt="still logo-main"
           className="w-[70%] h-[70%] hero-logo2"
         ></img>
       </div>
