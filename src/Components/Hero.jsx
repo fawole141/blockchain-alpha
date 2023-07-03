@@ -37,6 +37,12 @@ const Hero = () => {
           className="w-[70%] h-[70%] z-[5] hero-logo"
         ></img>
       </div>
+    <div className='md:hidden position-ill2'>
+    <img src={illustrations} />
+    </div>
+    <div className='md:hidden position-ill'>
+    <img src={illustrations} />
+    </div>
     </section>
   );
 };
