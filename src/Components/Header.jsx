@@ -55,7 +55,7 @@ const Header = () => {
         <div className="relative sm:hidden md:flex items-center">
           {/* <!-- Navigation links --> */}
           <ul
-            className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
+            className="list-style-none mr-auto duplicate-font flex flex-col pl-0 lg:flex-row"
             data-te-navbar-nav-ref
           >
             {routesList.map((route) => {

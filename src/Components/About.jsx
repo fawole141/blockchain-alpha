@@ -31,7 +31,7 @@ const About = () => {
       id="about"
     >
       <div className="flex justify-center items-center">
-        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-0">
+        <header className="font-bold matcha-font xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-0">
           ABOUT US
         </header>
         <div className="hidden md:block w-[7.5%] h-[7.5%]">
@@ -39,7 +39,7 @@ const About = () => {
         </div>
       </div>
 
-      <p className={`${styles.paragraph} mb-12 text-center mt-2`}>
+      <p className={`${styles.paragraph} mb-12 duplicate-font text-center mt-2 font-matcha`}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Necessitatibus, eum quaerat beatae voluptates rem doloremque explicabo
         veritatis eaque voluptatum placeat. Lorem ipsum dolor, sit amet
@@ -48,13 +48,13 @@ const About = () => {
       </p>
 
       <div
-        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-6 w-full mx-auto justify-start text-center  text-[#F0F0F0]`}
+        className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-6 w-full mx-auto justify-start text-center  text-natural`}
       >
         <div className={`${styles.card}`}>
-          <header className="text-3xl font-semibold">
+          <header className="text-3xl matcha-font font-semibold">
             Why Blockchain Alpha?
           </header>
-          <p className="text-xl">
+          <p className="text-xl duplicate-font">
             {readMore ? text1 : `${text1.substring(0, 200)}...`}
             <button
               onClick={() => setReadMore(!readMore)}
@@ -66,10 +66,10 @@ const About = () => {
         </div>
 
         <div className={`${styles.card} `}>
-          <header className="text-3xl font-semibold">
+          <header className="text-3xl matcha-font font-semibold">
             Top Technical Expertise
           </header>
-          <p>
+          <p className="duplicate-font">
             {readMore2 ? text2 : `${text2.substring(0, 200)}...`}
             <button
               onClick={() => setReadMore2(!readMore2)}
@@ -81,10 +81,10 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl font-semibold">
+          <header className="text-3xl matcha-font font-semibold">
             How We Stand Out As a Technical Content Marketing Agency
           </header>
-          <div>
+          <div className="duplicate-font">
             <div
               dangerouslySetInnerHTML={{
                 __html: showFullText
@@ -101,10 +101,10 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl font-semibold">
+          <header className="text-3xl matcha-font font-semibold">
             But You Only Write, Right?
           </header>
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col duplicate-font space-y-2">
             {readMore3 ? text3 + text3b : `${text3.substring(0, 200)}...`}
             <button
               onClick={() => setReadMore3(!readMore3)}
@@ -116,12 +116,12 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl font-semibold">
+          <header className="text-3xl matcha-font font-semibold">
             Experience The Difference That High-Quality Content Can Make For
             Your Brand
           </header>
 
-          <div>
+          <div className="duplicate-font">
             <div
               dangerouslySetInnerHTML={{
                 __html: showFullText2
@@ -141,10 +141,10 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl font-semibold">
+          <header className="text-3xl matcha-font font-semibold">
             What Do You Do? What Do You Deliver?
           </header>
-          <div>
+          <div className="duplicate-font">
             <div
               dangerouslySetInnerHTML={{
                 __html: showFullText3

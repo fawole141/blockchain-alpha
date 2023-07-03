@@ -47,8 +47,18 @@ body {
 .heroo{
   /* background-image: linear-gradient(145.96deg, rgb(65, 10, 182) 5.07%, rgb(91, 255, 64) 100%); */
   background-image: linear-gradient(120.96deg, #00FFDA 0%, #000000 40%, #A983F2 100%);
-  height: 100vh;
+  height: calc(100vh - 60px);
+  
 }
+
+.matcha-font{
+  font-family: "matcha";
+}
+
+.duplicate-font{
+  font-family: "DuplicateSans-Medium";
+}
+
 
 .hero-logo{
   margin-top: -2rem;
@@ -56,9 +66,8 @@ body {
 }
 
 .hero-logo2{
-  margin-top: -2rem;
-  margin-left: 3rem;
-  padding-bottom: 2rem;
+  margin-top: 0rem;
+  padding: 0.5rem;
 }
 
 .position-ill{

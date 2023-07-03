@@ -101,13 +101,13 @@ const Start = () => {
   return (
     <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
       <div className="md:w-[60%] sm:w-full mx-auto my-0" id={"start"}>
-        <div className="text-center text-5xl text-brand-color-1 py-8">
+        <div className="text-center matcha-font text-5xl text-brand-color-1 py-8">
         {STARTHeader.map((item, index) => {
               return <AnimatedText {...item} key={index} />;
             })}
         </div>
         <form
-          className="flex flex-col justify-center sm:mx-8"
+          className="flex flex-col justify-center duplicate-font sm:mx-8"
           onSubmit={(e) => sendMail(e)}
         >
           <div className="md:flex md:flex-row md:justify-between sm:flex-col">

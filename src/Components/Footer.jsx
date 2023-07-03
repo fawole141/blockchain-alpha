@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     // <!-- Footer container -->
     <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
-      <footer className="bg-black text-center text-natural lg:text-left">
+      <footer className="bg-black text-center text-natural duplicate-font lg:text-left">
         {/* <div className="flex items-center justify-center border-b-2 border-neutral-200 py-6 px-16 lg:justify-between">
         <div className="mr-12 hidden text-natural lg:block">
           <span>Get connected with us on social networks:</span>

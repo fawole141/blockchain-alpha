@@ -45,14 +45,14 @@ const FAQ = () => {
     <AnimateInView initial={{ opacity: 0, y: 5, zIndex: -1 }} variants={fade}>
       <div className=" text-natural mt-24" id="faqs">
         {/* <AnimateInView initial="hidden" variants={container}> */}
-          <div className="text-center text-4xl text-natural mb-8">
+          <div className="text-center matcha-font text-4xl text-natural mb-8">
             {FAQHeader.map((item, index) => {
               return <AnimatedText {...item} key={index} />;
             })}
           </div>
         {/* </AnimateInView> */}
 
-        <div className="grid  md:grid-cols-12 md:px-16 sm:px-8 pt-4 pb-8 sm:grid-cols-1">
+        <div className="grid duplicate-font md:grid-cols-12 md:px-16 sm:px-8 pt-4 pb-8 sm:grid-cols-1">
           {/* Div on the left  */}
           <div className="w-64 col-span-4 md:visible md:flex md:flex-col md:justify-center sm:invisible sm:hidden">
             <img src={logo3} alt="blockchain alpha logo" loading="lazy" />

@@ -25,6 +25,48 @@ const theme  =  createTheme({
 );
 
 const Team = () => {
+  const teamMembers = [
+    {
+      name: "John Olamide",
+      title: "Founder and Business Development Lead",
+      image: John
+    },
+    {
+      name: "Oderinde Damilola",
+      title: "Editor and Head of Operations",
+      image: Damilola
+    },
+    {
+      name: "Victor Fawole",
+      title: "Technical Writer and Crypto Analyst",
+      image: Victor
+    },
+    {
+      name: "Edozie Chimaobi",
+      title: "Smart-Contract, Frontend Developer and Technical Writer",
+      image: Mobi
+    },
+    {
+      name: "Micheal Fawole",
+      title: "Full-stack Web Developer and Technical Writer",
+      image: Micheal
+    },
+    {
+      name: "Opeyemi Adewole",
+      title: "Smart Contract Auditor & Technical Writer",
+      image: Blankman
+    },
+    {
+      name: "David Itelli",
+      title: "DeFi Analyst and Technical Writer",
+      image: Blankman
+    },
+    {
+      name: "Timilehin Okunola",
+      title: "Fullstack Developer and Technical Writer",
+      image: Timilehin
+    },
+  ]
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -32,175 +74,34 @@ const Team = () => {
       id="team"
     >
       <div className="flex justify-center items-center">
-        <header className="font-bold xs:text-[48px] text-[40px] xs:leading-[76.8px] text-paleWhite leading-[66.8px] w-full text-center mt-0">
+        <header className="font-bold matcha-font xs:text-[48px] text-[40px] xs:leading-[76.8px] text-paleWhite leading-[66.8px] w-full text-center mt-0">
           OUR TEAM
         </header>
       </div>
 
       <div
-        className={`mt-12 mx-4 md:mx-0 flex flex-col gap-y-4 space-y-4 md:space-y-0 md:grid md:grid-cols-4 md:gap-6 md:space-x-6`}
+        className={`mt-12 mx-4 md:mx-0 duplicate-font flex flex-col gap-y-4 space-y-4 md:space-y-0 md:grid md:grid-cols-4 md:gap-6 md:space-x-6`}
       >
-        <div className="md:ml-[24px] shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
+        {teamMembers.map((member) => <div key={member.name} className="md:ml-[24px]">
+          <Card  sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="140"
-                image={John}
+                image={member.image}
                 alt="John Image"
               />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  John Olamide
+              <CardContent sx={{height:"100px"}}>
+                <Typography variant="h5" component="div">
+                  {member.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Founder and Business Development Lead
+                 {member.title}
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
-        </div>
-        <div className="shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={Damilola}
-                alt="John Image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Oderinde Damilola
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Editor and Head of Operations
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <div className="shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={Victor}
-                alt="John Image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Victor Fawole
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Technical Writer and Crypto Analyst
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <div className="shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={Mobi}
-                alt="John Image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Edozie Chimaobi
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Smart-Contract, Frontend Developer and Technical Writer
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <div className="shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={Micheal}
-                alt="John Image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Micheal Fawole
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Full-stack Web Developer and Technical Writer
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <div className="shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={Blankman}
-                alt="John Image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Opeyemi Adewole
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Smart Contract Auditor & Technical Writer
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <div className="shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={Blankman}
-                alt="John Image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  David Itelli
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  DeFi Analyst and Technical Writer
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <div className="shadow-sm shadow-[#A983F2]">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                width="300"
-                image={Timilehin}
-                alt="John Image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Timilehin Okunola
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Fullstack Developer and Technical Writer
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
+        </div>)}
       </div>
     </div>
     </ThemeProvider>
