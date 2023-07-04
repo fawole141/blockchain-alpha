@@ -38,15 +38,7 @@ const About = () => {
           <Lottie animationData={animationData} />
         </div>
       </div>
-
-      <p className={`${styles.paragraph} mb-12 duplicate-font text-center mt-2 font-matcha`}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Necessitatibus, eum quaerat beatae voluptates rem doloremque explicabo
-        veritatis eaque voluptatum placeat. Lorem ipsum dolor, sit amet
-        consectetur adipisicing elit. Necessitatibus, eum quaerat beatae
-        voluptates rem doloremque explicabo veritatis eaque voluptatum placeat.
-      </p>
-
+      
       <div
         className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-6 w-full mx-auto justify-start text-center  text-natural`}
       >

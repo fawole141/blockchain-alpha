@@ -55,14 +55,14 @@ const Header = () => {
         <div className="relative sm:hidden md:flex items-center">
           {/* <!-- Navigation links --> */}
           <ul
-            className="list-style-none mr-auto duplicate-font flex flex-col pl-0 lg:flex-row"
+            className="list-style-none mr-auto duplicate-font flex flex-col pl-0 md:flex-row"
             data-te-navbar-nav-ref
           >
             {routesList.map((route) => {
               return (
                 <li
                   key={route.name}
-                  className="mb-4 lg:mb-0 lg:pr-12"
+                  className="mb-4 lg:mb-0 md:pr-12"
                   data-te-nav-item-ref
                 >
                   {/* <!-- Home link --> */}
@@ -89,7 +89,7 @@ const Header = () => {
         {/* <!-- Hamburger button for mobile view --> */}
         <button
           onClick={() => setShow(!show)}
-          className="md:hidden border-0 bg-transparent px-2 text-natural hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
+          className="md:hidden border-0 bg-transparent px-2 text-natural hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0"
           type="button"
           data-te-collapse-init
           data-te-target="#navbarSupportedContent1"

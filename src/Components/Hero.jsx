@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row heroo items-center px-6 md:px-16 mx-auto mt-0 py-6 md:py-8 space-y-0 md:space-y-0">
-      <div className="flex flex-col mb-20 md:mb-32 space-y-12 md:w-1/2">
-        <h1 className="max-w-sm text-4xl matcha-font font-bold text-white text-center md:max-w-[800px] md:text-5xl md:text-left">
+    <section className="flex flex-col md:flex-row md:items-center heroo items-center px-6 md:px-16 mx-auto mt-0  md:py-16 relative">
+      <div className="flex flex-col mb-20 md:mb-32 md:align-middle space-y-12 md:w-1/2">
+        <h1 className="max-w-sm text-4xl matcha-font font-semibold text-white text-center md:max-w-[800px] md:text-5xl md:text-left">
           Where you need to be for quality content and top-notch marketing
         </h1>
         <p
@@ -30,7 +30,7 @@ const Hero = () => {
           className="hero-logo2"
         ></img>
       </div>
-      <div className="hidden md:block md:w-1/2  ">
+      <div className="hidden md:block md:align-middle md:w-1/2  ">
         <img
           src={logo}
           alt="logo-main"
@@ -38,10 +38,10 @@ const Hero = () => {
         ></img>
       </div>
     <div className='md:hidden position-ill2'>
-    <img src={illustrations} />
+    <img src={illustrations} alt="illustrations"/>
     </div>
     <div className='md:hidden position-ill'>
-    <img src={illustrations} />
+    <img src={illustrations}  alt="illustrations"/>
     </div>
     </section>
   );
