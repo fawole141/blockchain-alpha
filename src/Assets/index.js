@@ -9,6 +9,7 @@ import Micheal from "./Michael Fawole-crop.jpg";
 import Mobi from "./Mobi-crop.jpg";
 import Blankman from "./profile.jpg";
 import Timilehin from "./Timilehin-crop.jpg";
+import Dave from "./Dave.png"
 
 export {
   illustrations,
@@ -22,4 +23,5 @@ export {
   Mobi,
   Blankman,
   Timilehin,
+  Dave
 };

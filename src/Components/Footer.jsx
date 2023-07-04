@@ -2,7 +2,7 @@ import React from "react";
 import logo2 from "../Assets/logo2.png";
 import AnimateInView from "./Animations/AnimateInView";
 import { fade } from "./Animations/AnimationVariants";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
@@ -14,6 +14,7 @@ const Footer = () => {
         <div className="mr-12 hidden text-natural lg:block">
           <span>Get connected with us on social networks:</span>
         </div> */}
+
         {/* <!-- Social network icons container --> */}
         {/* <div className="flex justify-center text-natural">
           <a href="#!" className="mr-6 text-natural">
@@ -60,8 +61,8 @@ const Footer = () => {
       </div> */}
 
         {/* <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
-        <div className="mx-6 py-10 text-center md:text-left px-10">
-          <div className=" flex md:flex-row sm:flex-col sm:space-y-16 md:space-y-0 justify-between ">
+        <div className="mx-6 pt-10 text-center md:text-left px-10">
+          <div className=" flex md:flex-row sm:flex-col sm:space-y-16 md:space-y-0 justify-center ">
             {/* <!-- Tailwind Elements section --> */}
             <div className="text-natural">
               <img
@@ -71,11 +72,11 @@ const Footer = () => {
                 alt=""
                 loading="lazy"
               />
-              <p>Your Best Marketing Partner in Web3</p>
+              <p className="text-center">Your Best Marketing Partner in Web3</p>
             </div>
 
             {/* <!-- Useful links section --> */}
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <div>
                 <h5 className="sm:mb-6 md:mb-3 flex justify-center font-semibold uppercase md:justify-start">
                   Useful links
@@ -122,7 +123,7 @@ const Footer = () => {
                   </Link>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

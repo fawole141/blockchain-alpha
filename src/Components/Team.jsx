@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import { John, Mobi, Damilola, Victor, Micheal, Blankman, Timilehin } from "../Assets";
+import { John, Mobi, Damilola, Victor, Micheal, Blankman, Timilehin, Dave } from "../Assets";
 
 const theme  =  createTheme({
   palette: {
@@ -59,7 +59,7 @@ const Team = () => {
     {
       name: "David Itelli",
       title: "DeFi Analyst and Technical Writer",
-      image: Blankman
+      image: Dave
     },
     {
       name: "Timilehin Okunola",

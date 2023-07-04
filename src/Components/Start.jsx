@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import AnimateInView from "./Animations/AnimateInView";
 import { fade } from "./Animations/AnimationVariants";
 import AnimatedText from "./Animations/AnimatedText";
-// import "@sweetalert2/theme-dark/dark.css";
+import { PopupButton } from "react-calendly";
 
 const Start = () => {
   const [name, setName] = useState("");
@@ -25,7 +25,7 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
-      setIsLoading(false)
+      setIsLoading(false);
     } else if (!email) {
       Swal.fire({
         title: "Error!",
@@ -36,7 +36,7 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
-      setIsLoading(false)
+      setIsLoading(false);
     } else if (!message) {
       Swal.fire({
         title: "Error!",
@@ -47,7 +47,7 @@ const Start = () => {
         background: "#1E1E1E",
         color: "white",
       });
-      setIsLoading(false)
+      setIsLoading(false);
     } else {
       const template = {
         from_name: name,
@@ -74,7 +74,7 @@ const Start = () => {
               background: "#1E1E1E",
               color: "white",
             });
-            setIsLoading(false)
+            setIsLoading(false);
           },
           (error) => {
             console.log(error.text);
@@ -87,7 +87,7 @@ const Start = () => {
               background: "#1E1E1E",
               color: "white",
             });
-            setIsLoading(false)
+            setIsLoading(false);
           }
         );
       setEmail("");
@@ -97,14 +97,15 @@ const Start = () => {
   };
 
   const STARTHeader = [{ type: "heading2", text: "Get In Touch" }];
+  const ScheduleHeader = [{type: "heading2", text: "Alternatively, Schedule A Call"}]
 
   return (
     <AnimateInView initial={{ opacity: 0, y: 10, zIndex: -1 }} variants={fade}>
       <div className="md:w-[60%] sm:w-full mx-auto my-0" id={"start"}>
         <div className="text-center matcha-font text-5xl text-brand-color-1 py-8">
-        {STARTHeader.map((item, index) => {
-              return <AnimatedText {...item} key={index} />;
-            })}
+          {STARTHeader.map((item, index) => {
+            return <AnimatedText {...item} key={index} />;
+          })}
         </div>
         <form
           className="flex flex-col justify-center duplicate-font sm:mx-8"
@@ -148,6 +149,34 @@ const Start = () => {
             {isLoading ? "Sending...." : "Send"}
           </button>
         </form>
+
+        <div className="mt-8 my-0">
+          <div className="text-center matcha-font text-4xl text-brand-color-1 py-8">
+          {ScheduleHeader.map((item, index) => {
+            return <AnimatedText {...item} key={index} />;
+          })}
+          </div>
+          <div className="flex justify-center">
+            <PopupButton
+              url="https://calendly.com/johnfawole18"
+              rootElement={document.getElementById("root")}
+              text="Schedule"
+              styles={{
+                color: "white",
+                margin: "0.5rem auto 1.5rem",
+                width: "10rem",
+                padding: "0.8em 1.7em",
+                backgroundColor: "transparent",
+                borderRadius: "0.3em",
+                cursor: "pointer",
+                fontWeight: 400,
+                fontSize: "17px",
+                border: "1px solid #a983f2",
+                textTransform: "uppercase",
+              }}
+            />
+          </div>
+        </div>
       </div>
     </AnimateInView>
   );
