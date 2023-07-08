@@ -27,23 +27,25 @@ const About = () => {
 
   return (
     <div
-      className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark`}
-      id="about"
+      className={`${styles.paddingX} ${styles.paddingY} bg-paleWhite text-testDark about-section`}
+      id="about" 
     >
-      <div className="flex justify-center items-center">
-        <header className="font-bold matcha-font xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-0">
+      <div className="flex justify-center items-center about-section">
+        <header className="font-bold matcha-font xs:text-[48px] text-[40px] xs:leading-[76.8px] leading-[66.8px] w-full text-center my-0 mb-4 md:mb-6">
           ABOUT US
         </header>
-        <div className="hidden md:block w-[7.5%] h-[7.5%]">
+        <div className="hidden md:block position-lottie">
           <Lottie animationData={animationData} />
         </div>
       </div>
-      
+      <p className={`${styles.paragraph} mb-6 md:mb-12 text-center`}>
+      Welcome to Blockchain Alpha, your premier destination for top-quality content and marketing services in the Web3 world. We specialize in technical content marketing for crypto companies, blockchains, startups, DAOs, and DeFi protocols.
+      </p>
       <div
         className={`flex flex-col gap-y-4 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-6 w-full mx-auto justify-start text-center  text-natural`}
       >
         <div className={`${styles.card}`}>
-          <header className="text-3xl matcha-font font-semibold">
+          <header className="text-2xl matcha-font font-semibold">
             Why Blockchain Alpha?
           </header>
           <p className="text-xl duplicate-font">
@@ -58,7 +60,7 @@ const About = () => {
         </div>
 
         <div className={`${styles.card} `}>
-          <header className="text-3xl matcha-font font-semibold">
+          <header className="text-2xl matcha-font font-semibold">
             Top Technical Expertise
           </header>
           <p className="duplicate-font">
@@ -73,7 +75,7 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl matcha-font font-semibold">
+          <header className="text-2xl matcha-font font-semibold">
             How We Stand Out As a Technical Content Marketing Agency
           </header>
           <div className="duplicate-font">
@@ -93,7 +95,7 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl matcha-font font-semibold">
+          <header className="text-2xl matcha-font font-semibold">
             But You Only Write, Right?
           </header>
           <div className="flex flex-col duplicate-font space-y-2">
@@ -108,7 +110,7 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl matcha-font font-semibold">
+          <header className="text-2xl matcha-font font-semibold">
             Experience The Difference That High-Quality Content Can Make For
             Your Brand
           </header>
@@ -133,7 +135,7 @@ const About = () => {
         </div>
 
         <div className={`${styles.card}`}>
-          <header className="text-3xl matcha-font font-semibold">
+          <header className="text-2xl matcha-font font-semibold">
             What Do You Do? What Do You Deliver?
           </header>
           <div className="duplicate-font">

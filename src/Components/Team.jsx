@@ -20,7 +20,12 @@ const theme  =  createTheme({
     background: {
       paper: '#A983F2',
     },
-  }
+  },
+  typography: {
+    fontFamily: [
+      'sans-serif',  
+    ].join(','),
+  },
 }
 );
 
@@ -74,7 +79,7 @@ const Team = () => {
       id="team"
     >
       <div className="flex justify-center items-center">
-        <header className="font-bold matcha-font xs:text-[48px] text-[40px] xs:leading-[76.8px] text-paleWhite leading-[66.8px] w-full text-center mt-0">
+        <header className="font-bold matcha-font xs:text-[48px] text-[40px] xs:leading-[76.8px] text-brand-color-1 leading-[66.8px] w-full text-center mt-0">
           OUR TEAM
         </header>
       </div>
